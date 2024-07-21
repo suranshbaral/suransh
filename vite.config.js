@@ -62,12 +62,11 @@ const DEFAULT_OPTIONS = {
 
 export default defineConfig({
   root: path.resolve(__dirname, './src'),
-  publicDir: path.resolve(__dirname, './public'), // Ensure the path is correct
+  publicDir: path.resolve(__dirname, './public'),
   base: './',
-
   build: {
     emptyOutDir: true,
-    outDir: path.resolve(__dirname, './build'),
+    outDir: path.resolve(__dirname, './dist'), // Ensure this is 'dist'
     rollupOptions: {
       output: {
         assetFileNames: assetInfo => {
@@ -107,4 +106,3 @@ export default defineConfig({
     host: '0.0.0.0',
   },
 });
-
